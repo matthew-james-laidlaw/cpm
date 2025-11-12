@@ -3,8 +3,12 @@ name = "cpm"
 version = "0.1.0"
 description = "C++ Project Manager"
 
-[tool.setuptools.packages.find]
-include = ["cpm"]
-
 [project.scripts]
 cpm = "cpm.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["cpm"]
+
+[tool.setuptools.package-data]
+cpm = ["templates/**/*"]

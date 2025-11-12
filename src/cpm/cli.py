@@ -1,4 +1,5 @@
 import argparse
+from cpm.commands import new, build, run
 
 def handle_new(args):
     pass
@@ -28,7 +29,7 @@ def main():
     )
 
     subcommand_new.add_argument('name', help='The project\'s name')
-    subcommand_new.set_defaults(func=handle_new)
+    subcommand_new.set_defaults(func=new.handle)
 
     subcommand_build = subparsers.add_parser(
         name='build',
@@ -37,7 +38,7 @@ def main():
     )
 
     subcommand_build.add_argument('--release', help='Build with release flags', action='store_true')
-    subcommand_build.set_defaults(func=handle_build)
+    subcommand_build.set_defaults(func=build.handle)
 
     subcommand_run = subparsers.add_parser(
         name='run',
@@ -46,7 +47,7 @@ def main():
     )
 
     subcommand_run.add_argument('--release', help='Build with release flags', action='store_true')
-    subcommand_run.set_defaults(func=handle_run)
+    subcommand_run.set_defaults(func=run.handle)
 
     args = parser.parse_args()
     args.func(args)
