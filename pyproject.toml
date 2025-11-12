@@ -7,4 +7,4 @@ description = "C++ Project Manager"
 include = ["cpm"]
 
 [project.scripts]
-cpm = "cpm:main"
+cpm = "cpm.cli:main"
