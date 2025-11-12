@@ -1,0 +1,10 @@
+[project]
+name = "cpm"
+version = "0.1.0"
+description = "C++ Project Manager"
+
+[tool.setuptools.packages.find]
+include = ["cpm"]
+
+[project.scripts]
+cpm = "cpm:main"

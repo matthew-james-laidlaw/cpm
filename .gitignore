@@ -1,1 +1,3 @@
 venv
+cpm.egg-info
+cpm/__pycache__
