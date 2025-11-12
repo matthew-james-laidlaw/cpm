@@ -1,0 +1,11 @@
+cmake_minimum_required(VERSION 4.1.2)
+
+set(CK_PROJECT_NAME {{ cookiecutter.project_name }})
+
+project(${CK_PROJECT_NAME} LANGUAGES CXX)
+
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR}/bin)
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR}/bin)
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR}/bin)
+
+add_executable(${CK_PROJECT_NAME} main.cpp)
