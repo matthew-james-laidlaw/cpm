@@ -12,3 +12,7 @@ include = ["cpm"]
 
 [tool.setuptools.package-data]
 cpm = ["templates/**/*"]
+
+[tool.pytest.ini_options]
+addopts = "-q --tb=short"
+testpaths = ["tests"]
