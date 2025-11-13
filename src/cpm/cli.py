@@ -1,15 +1,6 @@
 import argparse
 from cpm.commands import new, build, run
 
-def handle_new(args):
-    pass
-
-def handle_build(args):
-    pass
-
-def handle_run(args):
-    pass
-
 def main():
 
     parser = argparse.ArgumentParser(
