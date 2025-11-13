@@ -14,5 +14,5 @@ include = ["cpm"]
 cpm = ["templates/**/*"]
 
 [tool.pytest.ini_options]
-addopts = "-q --tb=short"
+addopts = "-q --tb=short -n auto"
 testpaths = ["tests"]

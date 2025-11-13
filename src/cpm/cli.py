@@ -1,7 +1,7 @@
 import argparse
 from cpm.commands import new, build, run
 
-def main():
+def main(argv=None):
 
     parser = argparse.ArgumentParser(
         prog='cpm',
@@ -40,5 +40,5 @@ def main():
     subcommand_run.add_argument('--release', help='Build with release flags', action='store_true')
     subcommand_run.set_defaults(func=run.handle)
 
-    args = parser.parse_args()
+    args = parser.parse_args(argv)
     args.func(args)

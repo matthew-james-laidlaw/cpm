@@ -1,2 +1,5 @@
+import subprocess
+
 def handle(args):
-    print('cpm build')
+    config = "Release" if args.release else "Debug"
+    subprocess.run(['cmake', '--build', 'build', '--config', config])
